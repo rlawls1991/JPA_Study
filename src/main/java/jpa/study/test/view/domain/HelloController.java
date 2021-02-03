@@ -1,4 +1,4 @@
-package jpa.study.view.controller;
+package jpa.study.test.view.domain;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
