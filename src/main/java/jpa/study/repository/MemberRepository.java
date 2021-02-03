@@ -4,6 +4,7 @@ import jpa.study.domain.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
@@ -19,7 +20,7 @@ public class MemberRepository {
      그렇기 때문에 final 변수만 자동으로 생성자를 만들어 주는
      lombok의 @RequiredArgsConstructor을 사용하게 된다면 아래와 같이 사용 가능하다.
     */
-    private final MemberRepository memberRepository;
+    private final EntityManager em;
 
     public void save(Member member) {
         em.persist(member);
