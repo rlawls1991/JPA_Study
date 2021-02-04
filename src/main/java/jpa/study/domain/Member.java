@@ -3,7 +3,7 @@ package jpa.study.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.tomcat.jni.Address;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;
