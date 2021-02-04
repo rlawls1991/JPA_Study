@@ -8,8 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "order_item")
-@Getter
-@Setter
+@Getter @Setter
 public class OrderItem {
     @Id @GeneratedValue
     @Column(name = "order_item_id")
@@ -23,6 +22,10 @@ public class OrderItem {
     private int orderPrice; //주문 가격
     private int count; //주문 수량
 
+    protected OrderItem(){
+        // lombok을 사용하면 아래의 Annocation 추가
+        // @NoArgsConstructor(access = AccessLevel.PROTECTED)
+    }
 
     //==생성 메서드==//
     public static OrderItem crateOrderItem(Item item, int orderPrice, int count){
